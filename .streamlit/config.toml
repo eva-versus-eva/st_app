@@ -1,0 +1,5 @@
+code[server]
+runOnSave = true
+
+[theme]
+base="dark"
