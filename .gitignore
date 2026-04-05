@@ -1,5 +1,5 @@
 .streamlit/secrets.toml
 test.ipynb
-multi_agents/.streamlit/secrets.toml
+multi_agents/.streamlit/
 multi_agents/test.ipynb
-multi_agents/chat_sessions/
+multi_agents/chat_history/
