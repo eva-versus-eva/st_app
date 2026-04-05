@@ -65,11 +65,8 @@ st.set_page_config(page_title="双 Agent 智能助手", page_icon="💬", layout
 st.title("🤖 双 Agent 智能助手")
 st.caption("研究员 🎶 + 产品经理 🔍 为你提供双重视角")
 
-
 available_models = model_helper.get_available_models()
 default_model = list(available_models.keys())[0]
-
-
 
 with st.sidebar:
     styled_text("sidebar-header", "chat history")
@@ -136,7 +133,6 @@ with st.sidebar:
                         st.rerun()
     st.divider()
 
-    # if st.session_state.sessions:
     if st.button("🗑️ delete current chat", use_container_width=True):
         if st.session_state.current_session:
             st.session_state.current_session.delete_session()
@@ -148,7 +144,6 @@ with st.sidebar:
                 st.session_state.messages = []
             st.rerun()
     st.divider()
-
 
     styled_text("sidebar-header", "select models")
     display_models = {
@@ -231,6 +226,5 @@ if prompt := st.chat_input("type your questions..."):
             new_title = prompt[:17] + "..."
         st.session_state.current_session.update_session_title(new_title)
         st.rerun()
-        # update_current_session()
 
 
